@@ -5,7 +5,7 @@
 #define AUTO_SHIFT_TIMEOUT 255
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_ALPHA
-#define SERIAL_NUMBER "Jmpn7/lbBpva"
+#define SERIAL_NUMBER "Jmpn7/JamALW"
 #define LAYER_STATE_8BIT
 
 #define RGB_MATRIX_STARTUP_SPD 60
