@@ -122,6 +122,10 @@ bool rgb_matrix_indicators_user(void) {
   if (rawhid_state.rgb_control) {
       return false;
   }
+  // Let the custom pool ripple animation draw without layer-color overrides
+  if (rgb_matrix_get_mode() == RGB_MATRIX_CUSTOM_POOL_RIPPLE) {
+      return false;
+  }
   if (!keyboard_config.disable_layer_led) { 
     switch (biton32(layer_state)) {
       case 0:
