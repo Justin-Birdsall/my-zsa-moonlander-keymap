@@ -2,6 +2,8 @@
     "modules": [
         "zsa/oryx",
         "zsa/mousejiggler",
+        "zsa/navigator_trackpad",
+        "zsa/automouse",
         "zsa/defaults"
     ]
 }
