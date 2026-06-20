@@ -75,7 +75,12 @@ jobs:
         run: |
           git fetch origin main
           git checkout -B main origin/main
-          git merge -Xignore-all-space oryx
+          git merge -Xignore-all-space oryx || {
+            # If merge fails, resolve conflicts by accepting incoming changes (theirs)
+            git checkout --theirs .
+            git add .
+            git commit -m "Merge oryx: resolve conflicts with incoming Oryx layout changes"
+          }
           git push
 
       - name: Update QMK firmware submodule to latest version (${{ steps.download-layout-source.outputs.firmware_version }})
